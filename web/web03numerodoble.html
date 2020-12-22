@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Número doble</h1>
+        <form>
+            <label>Número: </label>
+            <input type="number" id="cajanumero" name="cajanumero"/>
+            <button type="button" onclick="mostrarDoble()">
+                Mostrar doble
+            </button>
+        </form>
+        <h1 id="resultado" style="color:red"></h1>
+        <script type="text/javascript">
+            function mostrarDoble(){
+                  //NECESITAMOS LA CAJA DONDE ESTA EL NUMERO
+                  var cajanumero = 
+                          document.getElementById("cajanumero");
+                  //NECESITAMOS EL NUMERO DE LA CAJA
+                  var numero = cajanumero.value;
+                  //TODO VALUE ES UN TEXTO, AUNQUE SEA UN NUMERO
+                  //SI VAMOS A REALIZAR OPERACIONES CON EL
+                  //DEBEMOS CONVERTIR EL TEXTO NUMERICO A NUMERO
+                  numero = parseInt(numero);
+                  //DECLARAMOS VARIABLE PARA LA OPERACION
+                  var doble = numero * 2;
+                  //BUSCAMOS EL OBJETO DONDE QUEREMOS PINTAR
+                  var resultado = document.getElementById("resultado");
+                  //PINTAMOS EN RESULTADO EL MENSAJE QUE DESEEMOS
+                  resultado.innerText = "El doble de "
+                  + numero + " es " + doble;
+            }
+        </script>
+    </body>
+</html>

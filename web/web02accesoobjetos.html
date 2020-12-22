@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Acceso a objetos</h1>
+        <button onclick="cambiarObjetos()">
+            Cambiar elementos
+        </button>
+        <p id="parrafo">Soy un parrafo</p>
+        <h1 id="contenido">Contenido</h1>
+        <input type="text" id="cajadato"/>
+        <img src="images/1.jpg" id="imagen"
+             style="width:80px; height: 80px" 
+             onmouseover="entrarImagen()"
+             onmouseout="salirImagen()"
+             alt=""/>
+        <script type="text/javascript">
+            function entrarImagen(){
+                var imagen = document.getElementById("imagen");
+                imagen.src = "images/2.jpg";
+            }
+            
+            function salirImagen(){
+                var imagen = document.getElementById("imagen");
+                imagen.src = "images/1.jpg";
+            }
+            
+            function cambiarObjetos(){
+                var h1 = 
+                        document.getElementById("contenido");
+                h1.innerText = "He cambiado";
+                var p = 
+                        document.getElementById("parrafo");
+                p.innerHTML = "<input/>";
+                var cajadato = 
+                        document.getElementById("cajadato");
+                cajadato.value = "Valor de caja";
+                var imagen = document.getElementById("imagen");
+                imagen.src = "images/2.jpg";
+            }
+        </script>
+    </body>
+</html>
