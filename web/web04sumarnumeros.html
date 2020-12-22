@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Sumar números</h1>    
+        </header>
+        <h1>No importan para Google</h1>
+        <form>
+            <label>Número 1</label>
+            <input type="number" id="cajanumero1"
+                   name="cajanumero1"/><br/>
+            <label for="cajanumero2">Número 2: </label>
+            <input type="number" id="cajanumero2"
+                   name="cajanumero2"/><br/>
+            <button type="button" onclick="mostrarSuma()">
+                Mostrar suma
+            </button>
+        </form>
+        <h2 style="color:blue" id="resultado"></h2>
+        <script type="text/javascript">
+            function mostrarSuma(){
+                var cajanumero1 = 
+                        document.getElementById("cajanumero1");
+                var cajanumero2 = 
+                        document.getElementById("cajanumero2");
+                var numero1 = parseInt(cajanumero1.value);
+                var numero2 = parseInt(cajanumero2.value);
+                var suma = numero1 + numero2;
+                var resultado = 
+                        document.getElementById("resultado");
+                resultado.innerText = "La suma de " + numero1
+                + " + " + numero2 + " = " + suma;
+            }
+        </script>
+    </body>
+</html>
