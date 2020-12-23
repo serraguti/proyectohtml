@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Números pares 1..20</h1>
+        <button type="button" onclick="mostrarPares()">
+            Mostrar pares
+        </button>
+        <div id="resultado"></div>
+        <table border="1">
+            <tr>
+                <td>Par</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Par</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function mostrarPares(){
+                var html = "<table border='1'>";
+                for (var i = 2; i <= 20; i+=2){
+                    html += "<tr>";
+                    html += "<td>Par</td>";
+                    html += "<td>" + i + "</td>";
+                    html += "</tr>";
+                }
+                html += "</table>";
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = html;
+            }
+        </script>
+    </body>
+</html>
