@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .rojo {
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="rojo">Primer ejemplo Jquery</h1>
+        <h2 class="rojo">Otro titulo</h2>
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p>Parrafo 3</p>
+        <p>Parrafo 4</p>
+        <button id="boton">
+            Pulsar
+        </button>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //SELECTOR DE CLASE
+                $(".rojo").click(function() {
+                   $(".rojo").hide(); 
+                });
+                
+                //AL HACER CLICK EN CUALQUIER p
+                $("p").click(function(){
+                    //ACCIONES A REALIZAR AL PULSAR
+                    //DENTRO DE UN METODO (click)
+                    //QUE LLAMA A VARIOS OBJETOS, PODEMOS
+                    //ACCEDER AL OBJETO PULSADO MEDIANTE LA PALABRA
+                    //this
+                    //$("p").hide();
+                    $(this).hide();
+                });
+                
+                $("#boton").click(function() {
+                   $("p").show();
+                   $(".rojo").show();
+                });
+            });
+        </script>
+    </body>
+</html>
