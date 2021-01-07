@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>Prueba PlugIn JQuery</h1>
+        <button id="botonmensaje" type="button">
+            Mostrar mensaje
+        </button>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/sweetalert2.all.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#botonmensaje").click(function () {
+                    //alert("Funciona!!!");
+                    Swal.fire({
+                        imageUrl: 'images/2.jpg',
+                        imageHeight: 300,
+                        imageAlt: 'A tall image'
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
