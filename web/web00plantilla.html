@@ -20,11 +20,6 @@
 
         <!-- Custom styles for this template -->
         <link href="css/starter-template.css" rel="stylesheet" type="text/css"/>
-        <style>
-            .imagen {
-                width: 300px; height: 350px;
-            }
-        </style>
     </head>
     <body>
         <header>
@@ -50,7 +45,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="web18tablamultiplicar.html">Tabla</a>
-                        </li>  
+                        </li>                          
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </li>
@@ -75,19 +73,7 @@
 
                 <div class="starter-template">
                     <h1>Acceso Objetos JQuery</h1>
-                    <button class="btn-info" id="botoncambiar">
-                        Cambiar objetos
-                    </button>
-                    <hr/>
-                    <label>Su nombre: </label>
-                    <input type="text" id="cajanombre"
-                           class="form-control"/>
-                    <button class="btn-success" id="botonnombre">
-                        Mostrar saludo
-                    </button>
-                    <h1 id="textonombre"></h1>
-                    <p id="parrafo">Soy un parrafo</p>
-                    <img src="images/1.jpg" alt=""/>
+
                 </div>
 
             </main><!-- /.container -->            
@@ -97,26 +83,7 @@
         <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
         <script>
             $(document).ready(function () {
-                $("#botoncambiar").click(function() {
-                    //CAMBIAMOS EL TEXTO
-                    $("#parrafo").text("Texto cambiado con JQuery");
-                    //CAMBIAMOS EL ESTILO
-                    $("#parrafo").css("background-color", "lightblue");
-                    //CAMBIAR EL ATRIBUTO DE UN OBJETO (IMAGEN)
-                    $("img").attr("src", "images/2.jpg");
-                    //QUIERO PONER UNA CLASE A LA IMAGEN
-                    $("img").addClass("imagen");
-                    $("img").addClass("img-thumbnail");
-                });
-                
-                $("#botonnombre").click(function() {
-                    //ACCEDEMOS AL NOMBRE DE LA CAJA
-                    //SI SON CONTROLES DE FORMULARIO, SE HACE MEDIANTE .val()
-                    var nombre = $("#cajanombre").val();
-                    var saludo = "Bienvenido, " + nombre;
-                    //SI SON h1 o p, SE UTILIZA .text()
-                    $("#textonombre").text(saludo);
-                });
+
             });
         </script>
     </body>
